@@ -50,12 +50,19 @@ function LoadConfig () {
 	Config.MakeRunewords = me.gametype === 1 ? true : false;
 
 	/* General logging. */
-	Config.ItemInfo = false;
-	Config.LogKeys = true;
-	Config.LogOrgans = false;
-	Config.LogMiddleRunes = true;
-	Config.LogHighRunes = true;
-	Config.ShowCubingInfo = true;
+	Config.ItemInfo = false; // Log stashed, skipped (due to no space) or sold items.
+	Config.ItemInfoQuality = []; // The quality of sold items to log. See NTItemAlias.dbl for values. Example: Config.ItemInfoQuality = [6, 7, 8];
+
+	// Manager Item Log Screen
+	Config.LogKeys = false; // Log keys on item viewer
+	Config.LogOrgans = true; // Log organs on item viewer
+	Config.LogLowRunes = false; // Log low runes (El - Dol) on item viewer
+	Config.LogMiddleRunes = false; // Log middle runes (Hel - Mal) on item viewer
+	Config.LogHighRunes = true; // Log high runes (Ist - Zod) on item viewer
+	Config.LogLowGems = false; // Log low gems (chipped, flawed, normal) on item viewer
+	Config.LogHighGems = false; // Log high gems (flawless, perfect) on item viewer
+	Config.SkipLogging = []; // Custom log skip list. Set as three digit item code or classid. Example: ["tes", "ceh", 656, 657] will ignore logging of essences.
+	Config.ShowCubingInfo = true; // Show cubing messages on console
 
 	/* Town configuration. */
 	Config.HealHP = 99;

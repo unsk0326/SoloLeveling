@@ -779,7 +779,7 @@ Town.stash = function (stashGold) {
 	if (stashGold) {
 		if (me.getStat(14) >= Config.StashGold && me.getStat(15) < 25e5 && this.openStash()) {
 			gold(me.getStat(14), 3);
-			delay(1000); // allow UI to initialize
+			delay(1300); // allow UI to initialize
 			me.cancel();
 		}
 	}
@@ -1100,6 +1100,7 @@ Town.characterRespec = function () {// Akara reset for build change
 		AutoBuild.initialize();
 		AutoStat.init(Config.AutoStat.Build, Config.AutoStat.Save, Config.AutoStat.BlockChance, Config.AutoStat.UseBulk);
 		AutoSkill.init(Config.AutoSkill.Build, Config.AutoSkill.Save);
+
 	}
 
 	return true;

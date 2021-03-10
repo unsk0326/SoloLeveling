@@ -296,14 +296,14 @@ Precast.summon = function (skillId) {
 		}
 
 		if (Skill.getManaCost(skillId) > me.mp) {
-			delay(1000);
+			delay(1300);
 			retry++;
 		}
 
 		if (retry > count * 2) {
 			if (me.inTown) {
 				Town.heal();
-				delay(1000 + me.ping);
+				delay(1300 + me.ping);
 				let coord = CollMap.getRandCoordinate(me.x, -5, 5, me.y, -5, 5);	//Keeps bots from getting stuck trying to summon
 				Pather.moveTo(coord.x, coord.y);
 

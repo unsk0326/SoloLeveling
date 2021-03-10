@@ -203,7 +203,7 @@ var Quest = {
 			}
 
 			tyrael.interact();
-			delay(1000 + me.ping);
+			delay(1300 + me.ping);
 			me.cancel();
 
 			if (Pather.getPortal(null)) {
